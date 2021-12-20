@@ -17,16 +17,22 @@ I am 19 years old, I am studying at the Polytechnic College as an electrical tec
 * Figma, Photoshop
 
 ## Code Examples
-**Bumps in the Road from CODEWARS**.Your car is old, it breaks easily. The shock absorbers are gone and you think it can handle about 15 more bumps before it dies totally.
+**Count the Digit from CODEWARS**.Take an integer n (n >= 0) and a digit d (0 <= d <= 9) as an integer.
 
-Unfortunately for you, your drive is very bumpy! Given a string showing either flat road ("_") or bumps ("n"), work out if you make it home safely. 15 bumps or under, return "Woohoo!", over 15 bumps return "Car Dead".
+Square all numbers k (0 <= k <= n) between 0 and n.
+
+Count the numbers of digits d used in the writing of all the k**2.
+
+Call nb_dig (or nbDig or ...) the function taking n and d as parameters and returning this count.
 ```
-function bump(x) {
-  let numberOfBumps = 0
-  for (let i = 0; i <= x.length - 1; i++) {
-    x[i] == "n" ? numberOfBumps += 1 : numberOfBumps += 0;
+function nbDig(n, d) {
+  let square
+  let count = 0
+  for (let i = 0; i <= n; i++) {
+    square = (i ** 2 + '').split('').
+      forEach((s) => s == d ? count++ : null)
   }
-  return numberOfBumps <= 15 ? "Woohoo!" : "Car Dead"
+  return count
 }
 ```
 

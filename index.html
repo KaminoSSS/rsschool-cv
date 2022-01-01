@@ -8,7 +8,7 @@
 
 	<title>Egor Perfilyev</title>
 
-	<link rel="icon" type="../image/x-icon" href="/images/fav.png">
+	<link rel="icon" type="images/fav.png" href="images/fav.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -113,7 +113,8 @@
 							Russian - native speaker
 						</li>
 						<li class="about__item text">
-							English - B2 Upper-intermediate (according to the online test at <a target="blank" href="https://www.efset.org/cert/ihhzE3"> EFset</a>)
+							English - B2 Upper-intermediate (according to the online test at <a target="blank"
+								href="https://www.efset.org/cert/ihhzE3"> EFset</a>)
 
 						</li>
 					</ul>
@@ -129,33 +130,34 @@
 			<h3 class="subtitle">Task</h3>
 
 			<h4 class="text mb20">
-				Count the Digit from CODEWARS.Take an integer n (n >= 0) and a digit d (0 <= d <=9) as an integer. Square
-					all numbers k (0 <=k <=n) between 0 and n. Count the numbers of digits d used in the writing of all the
+				Count the Digit from CODEWARS.Take an integer n (n >= 0) and a digit d (0 &#60= d &#60=9) as an integer. Square
+					all numbers k (0 &#60=k &#60=n) between 0 and n. Count the numbers of digits d used in the writing of all the
 					k**2. Call nb_dig (or nbDig or ...) the function taking n and d as parameters and returning this count.
 					</h3>
 
 					<h3 class="subtitle mb20">Code</h3>
 
 					<pre class="code text">
+						<code>	
 function nbDig(n, d) {
     let square;
     let count = 0;
 
-    for (let i = 0; i <= n; i++) {
+    for (let i = 0; i &#60= n; i++) {
         square=(i ** 2 + '' ).split(''). 
             forEach((s)=> s == d ? count++ : null)
     }
 
     return count
-}                    </pre>
+}       </code>             </pre>
 		</div>
 	</section>
 
 	<footer class="footer">
 		<div class="container">
 			<div class="footer__wrapper">
-				<a href="https://rs.school/" class="footer__link-2" target="blank"> <img 
-						class="footer__logo" src="https://rs.school/images/rs_school_js.svg" alt="rs-school"></a>
+				<a href="https://rs.school/" class="footer__link-2" target="blank"> <img class="footer__logo"
+						src="https://rs.school/images/rs_school_js.svg" alt="rs-school"></a>
 				<a class="footer__link" target="blank" href="https://rs.school/"></a>
 				<h4 class="footer__year text">2022</h4>
 			</div>

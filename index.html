@@ -1,12 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+
+	<title>Egor Perfilyev</title>
+
+	<link rel="icon" type="../image/x-icon" href="/images/fav.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-	
+	<main class="main">
+		<header class="header">
+			<div class=" text">RS-School Student</div>
+			<nav class="header__nav">
+				<ul class="header__list">
+					<li class="header__item text"><a href="#my-skills">My Skills</a></li>
+					<li class="header__item text"><a href="#about-me">About Me</a></li>
+					<li class="header__item text"><a href="#code-examples">Code Examples</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<h1 class="main__text">Egor Perfilyev - Frontend Developer</h1>
+	</main>
+
+	<section class="section skills">
+		<div class="container">
+			<h2 id="my-skills" class="title">My Skills</h2>
+			<ul class="skills__list">
+				<li class="skills__item">HTML</li>
+				<li class="skills__item">CSS</li>
+				<li class="skills__item">JavaScript</li>
+				<li class="skills__item">Git/GitHub</li>
+				<li class="skills__item">Figma</li>
+				<li class="skills__item">Photoshop</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="section about">
+		<div class="container">
+			<h2 id="about-me" class="title">About Me</h2>
+			<div class="about__wrapper">
+				<img class="about__img" src="/images/avatar.jpg" alt="avatar">
+
+				<div class="about__text-wrapper">
+
+					<h3 class="subtitle">Biographie</h3>
+
+					<h4 class="about__text text mb20">
+						I am 19 years old, I am studying at the Polytechnic College as an electrical
+						technician. I think
+						that
+						working in my
+						specialty does not give me enough freedom. I want my work not to be monotonous and there were
+						always
+						opportunities for
+						further career growth. My goal is to become a high-level developer.
+					</h4>
+
+					<h3 class="subtitle">My Contact Info</h3>
+
+					<ul class="about__list mb20">
+						<li class="about__item">
+							<a class="about__link text" href="#">
+								Phone
+							</a>
+						</li>
+						<li class="about__item">
+							<a class="about__link text" href="#">
+								E-mail
+							</a>
+						</li>
+						<li class="about__item">
+							<a class="about__link text" href="#">
+								GitHub
+							</a>
+						</li>
+						<li class="about__item">
+							<a class="about__link text" href="#">
+								Telegram
+							</a>
+						</li>
+					</ul>
+
+					<h3 class="subtitle">Education</h3>
+
+					<ul class="about__list mb20">
+						<li class="about__item text">
+							Novopolotsk State Polytechnic College
+						</li>
+						<li class="about__item text">
+							JavaScript Manual on learnjavascript.ru (in progress)
+						</li>
+						<li class="about__item text">
+							RS Schools Course «JavaScript/Front-end. Stage 0» (in progress)
+						</li>
+					</ul>
+
+					<h3 class="subtitle">Languages</h3>
+
+					<ul class="about__list">
+						<li class="about__item text">
+							Russian - native speaker
+						</li>
+						<li class="about__item text">
+							English - B2 Upper-intermediate (according to the online test at <a target="blank" href="https://www.efset.org/cert/ihhzE3"> EFset</a>)
+
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<h2 id="code-examples" class="title">Code Examples</h2>
+
+			<h3 class="subtitle">Task</h3>
+
+			<h4 class="text mb20">
+				Count the Digit from CODEWARS.Take an integer n (n >= 0) and a digit d (0 <= d <=9) as an integer. Square
+					all numbers k (0 <=k <=n) between 0 and n. Count the numbers of digits d used in the writing of all the
+					k**2. Call nb_dig (or nbDig or ...) the function taking n and d as parameters and returning this count.
+					</h3>
+
+					<h3 class="subtitle mb20">Code</h3>
+
+					<pre class="code text">
+function nbDig(n, d) {
+    let square;
+    let count = 0;
+
+    for (let i = 0; i <= n; i++) {
+        square=(i ** 2 + '' ).split(''). 
+            forEach((s)=> s == d ? count++ : null)
+    }
+
+    return count
+}                    </pre>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				<a href="https://rs.school/" class="footer__link-2" target="blank"> <img 
+						class="footer__logo" src="https://rs.school/images/rs_school_js.svg" alt="rs-school"></a>
+				<a class="footer__link" target="blank" href="https://rs.school/"></a>
+				<h4 class="footer__year text">2022</h4>
+			</div>
+		</div>
+	</footer>
 </body>
+
 </html>

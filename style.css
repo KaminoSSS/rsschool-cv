@@ -504,7 +504,7 @@ a:hover{
 
 .main {
 	min-height: 100vh;
-	background-image: url("/images/background.jpg");
+	background-image: url("images/background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: left 30px;
@@ -706,7 +706,7 @@ a:hover{
 }
 
 .footer__link {
-	background-image: url(/images/github.png);
+	background-image: url(images/github.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	width: 50px;

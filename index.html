@@ -130,8 +130,8 @@
 			<h3 class="subtitle">Task</h3>
 
 			<h4 class="text mb20">
-				Count the Digit from CODEWARS.Take an integer n (n >= 0) and a digit d (0 &#60= d &#60=9) as an integer. Square
-					all numbers k (0 &#60=k &#60=n) between 0 and n. Count the numbers of digits d used in the writing of all the
+				Count the Digit from CODEWARS.Take an integer n (n >= 0) and a digit d (0 &#60;= d &#60;=9) as an integer. Square
+					all numbers k (0 &#60;=k &#60;=n) between 0 and n. Count the numbers of digits d used in the writing of all the
 					k**2. Call nb_dig (or nbDig or ...) the function taking n and d as parameters and returning this count.
 					</h3>
 
@@ -143,7 +143,7 @@ function nbDig(n, d) {
     let square;
     let count = 0;
 
-    for (let i = 0; i &#60= n; i++) {
+    for (let i = 0; i &#60;= n; i++) {
         square=(i ** 2 + '' ).split(''). 
             forEach((s)=> s == d ? count++ : null)
     }

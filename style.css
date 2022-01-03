@@ -705,7 +705,7 @@ a:hover{
 	height: 50px;
 }
 
-.footer__link {
+.footer__git-link {
 	background-image: url(images/github.png);
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -716,7 +716,7 @@ a:hover{
 	padding-bottom: 0;
 }
 
-.footer__link-2{
+.footer__rsschool-link{
   padding-bottom: 0;
   bottom: none;
   border-bottom: none;

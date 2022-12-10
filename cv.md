@@ -33,6 +33,7 @@ function squareSum(numbers){
   }
   return sum
 }
+
 ```
 
 #### Work experience

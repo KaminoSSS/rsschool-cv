@@ -149,8 +149,42 @@ a:hover{
    background-color: #1e232c;
 }
 
+.footer a{
+   color: white;
+}
+
 .footer_list{
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+}
+
+.footer_list_item{
+	position: relative;
+}
+
+.github::before{
+	position: absolute;
+	content: "";
+	left: 0;
+	top: -8px;
+	width: 32px;
+	height: 32px;
+	background-image: url("./media/img/svg/github-logo.svg");
+	background-repeat: no-repeat;
+}
+
+.github{
+
+	padding-left: 40px;
+}
+
+.footer_year{
+	margin: 16px 0;
+}
+
+.rs_school_js_svg{
+	width: 86px;
+	height: 32px;
 }
 

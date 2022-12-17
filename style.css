@@ -1,4 +1,5 @@
 /* reset style */
+
 h1{
 	margin: 0;
 }
@@ -7,15 +8,19 @@ ul{
 	padding: 0;
 	list-style-type: none;
 }
-a{
-	color: #000;
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap'); 
+
+/* general styles */
+
 body{
 	max-width: 1280px;
 	margin: 0 auto;
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", Arial, sans-serif;
+}
+
+a:hover{
+	text-decoration: none;
 }
 
 .section_title{
@@ -36,9 +41,70 @@ body{
 	background-color: #f2c100;
 }
 
+/* header styles */
+
 .header{
 	background-color: #e6e6e6;
 }
+
+.nav_list{
+	height: 50px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.nav_list_item{
+	padding: 14px 10px;
+	
+}
+
+.nav_list_item a{
+	color: #000;
+}
+
+/* main styles */
+
+.main{
+	display: grid;
+	grid-template-columns: 380px 1fr;
+}
+
+/* left_side styles*/
+
+.left_side{
+	color: white;
+	background-color: #2c323d;
+}
+
+.left_side .section_title {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.kobeni_pic{
+	width: 100%;
+}
+
+.contacts{
+   background-color: #343945;
+	padding: 44px 0px 54px 0px;
+}
+
+.contacts_list, .education_list{
+	margin: 0 60px;
+}
+
+.contacts_list_item, .education_list_item{
+	font-weight: 400;
+	line-height: 30px;
+	margin-bottom: 25px;
+}
+
+.contacts_list_item a{
+	color: rgb(255, 255, 255);
+}
+
+/* right_side styles*/
+
 .name{
 	margin: 125px 80px 125px 60px;
 }
@@ -53,38 +119,27 @@ body{
 	margin-top: 20px;
 }
 
-.nav_list{
-	height: 50px;
-	display: flex;
-	justify-content: space-around;
+.about_me_paragraph, .code_paragraph{
+	margin: 0;
+	margin-left: 60px;
+	line-height: 24px;
 }
 
-.nav_list_item{
-	padding: 14px 10px;
+.code{
+	padding-left: 60px;
 }
 
-/* main styles */
-
-.main{
-	display: grid;
-	grid-template-columns: 380px 1fr;
+.skills{
+	font-size: 16px;
+	line-height: 30px;
+	font-weight: 400;
+	color: black;
 }
 
-.left_side{
-	color: white;
-	background-color: #2c323d;
-}
-
-.kobeni_pic{
-	width: 100%;
-}
-
-.contacts{
-	padding: 44px 0px 54px 0px;
-}
-
-.contacts_list_item{
-	margin-bottom: 25px;
+.skills_list{
+	margin: 0 60px;
+	padding-left: 20px;
+	list-style-type: disc;
 }
 
 /* footer styles */

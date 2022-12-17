@@ -142,6 +142,11 @@ a:hover{
 	list-style-type: disc;
 }
 
+.project_link{
+	padding-left: 60px;
+	color: black;
+}
+
 /* footer styles */
 .footer{
 	padding: 20px 60px;

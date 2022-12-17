@@ -1,0 +1,195 @@
+/* reset style */
+
+h1{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap'); 
+
+/* general styles */
+
+body{
+	max-width: 1280px;
+	margin: 0 auto;
+	font-family: "Poppins", Arial, sans-serif;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+.section_title{
+	position: relative;
+	padding-left: 60px;
+	margin-bottom: 36px;
+	font-size: 24px;
+   line-height: 36px;
+   font-weight: 600;
+}
+.section_title::before{
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0;
+	width: 20px;
+	height: 36px;
+	background-color: #f2c100;
+}
+
+/* header styles */
+
+.header{
+	background-color: #e6e6e6;
+}
+
+.nav_list{
+	height: 50px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.nav_list_item{
+	padding: 14px 10px;
+	
+}
+
+.nav_list_item a{
+	color: #000;
+}
+
+/* main styles */
+
+.main{
+	display: grid;
+	grid-template-columns: 380px 1fr;
+}
+
+/* left_side styles*/
+
+.left_side{
+	color: white;
+	background-color: #2c323d;
+}
+
+.left_side .section_title {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.kobeni_pic{
+	width: 100%;
+}
+
+.contacts{
+   background-color: #343945;
+	padding: 44px 0px 54px 0px;
+}
+
+.contacts_list, .education_list{
+	margin: 0 60px;
+}
+
+.contacts_list_item, .education_list_item{
+	font-weight: 400;
+	line-height: 30px;
+	margin-bottom: 25px;
+}
+
+.contacts_list_item a{
+	color: rgb(255, 255, 255);
+}
+
+/* right_side styles*/
+
+.name{
+	margin: 125px 80px 125px 60px;
+}
+
+.name_title{
+	font-size: 50px;
+   line-height: 50px;
+   font-weight: 600;
+}
+
+.name_subtitle{
+	margin-top: 20px;
+}
+
+.about_me_paragraph, .code_paragraph{
+	margin: 0;
+	margin-left: 60px;
+	line-height: 24px;
+}
+
+.code{
+	padding-left: 60px;
+}
+
+.skills{
+	font-size: 16px;
+	line-height: 30px;
+	font-weight: 400;
+	color: black;
+}
+
+.skills_list{
+	margin: 0 60px;
+	padding-left: 20px;
+	list-style-type: disc;
+}
+
+.project_link{
+	padding-left: 60px;
+	color: black;
+}
+
+/* footer styles */
+.footer{
+	padding: 20px 60px;
+   color: white;
+   background-color: #1e232c;
+}
+
+.footer a{
+   color: white;
+}
+
+.footer_list{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer_list_item{
+	position: relative;
+}
+
+.github::before{
+	position: absolute;
+	content: "";
+	left: 0;
+	top: -8px;
+	width: 32px;
+	height: 32px;
+	background-image: url("./media/img/svg/github-logo.svg");
+	background-repeat: no-repeat;
+}
+
+.github{
+
+	padding-left: 40px;
+}
+
+.footer_year{
+	margin: 16px 0;
+}
+
+.rs_school_js_svg{
+	width: 86px;
+	height: 32px;
+}
+

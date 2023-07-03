@@ -115,23 +115,82 @@
         <section id="code" class="code_example">
           <h2 class="section_title">Code example</h2>
           <p class="code_paragraph">
-            Complete the square sum function so that it squares each number
-            passed into it and then sums the results together.
+            A function which formats a duration, given as a number of seconds, in a human-friendly way.The function must accept a non-negative integer. If it is zero, it just returns "now". Otherwise, the duration is expressed as a combination of years, days, hours, minutes and seconds.
             <br>
-            For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 +
-            2^2 = 9.
+            For example, 62 function should return: "1 minute and 2 seconds"
+            <br>
+            <br>
           </p>
+          <h4 class="section_subtitle">Detailed rules:</h4>
+          <ul class="code_example__rule-list">
+            <li class="rule-list__item">
+              The resulting expression is made of components like 4 seconds, 1 year, etc. In general, a positive integer and one of the valid units of time, separated by a space. The unit of time is used in plural if the integer is greater than 1.
+            </li>
+            <li class="rule-list__item">
+              The components are separated by a comma and a space (", "). Except the last component, which is separated by " and ", just like it would be written in English.
+            </li>
+            <li class="rule-list__item">
+              A more significant units of time will occur before than a least significant one. Therefore, 1 second and 1 year is not correct, but 1 year and 1 second is.
+            </li>
+            <li class="rule-list__item">
+              Different components have different unit of times. So there is not repeated units like in 5 seconds and 1 second.
+            </li>
+            <li class="rule-list__item">
+              A component will not appear at all if its value happens to be zero. Hence, 1 minute and 0 seconds is not valid, but it should be just 1 minute.
+            </li>
+            <li class="rule-list__item">
+              A unit of time must be used "as much as possible". It means that the function should not return 61 seconds, but 1 minute and 1 second instead. Formally, the duration specified by of a component must not be greater than any valid more significant unit of time.
+            </li>
+          </ul>
           <pre class="code">
-					<code>
-function squareSum(numbers){
-	let sum = 0;
-	for(let i = 0;i &lt; numbers.length;i++){
-		sum += numbers[i]**2
+          <code>
+function formatDuration (seconds) {
+	if(seconds === 0){
+		return 'now'
 	}
-	return sum
+	let remainder = seconds,
+			resultArr = [],
+			years = 0,
+			days = 0,
+			hours = 0,
+			minutes = 0;
+	if (seconds >= 31536000){
+		years = Math.trunc(remainder / 31536000)
+		remainder -= years * 31536000
+		resultArr.push(`${years} year` + (years > 1 ? 's': ''))
+	}
+	if (remainder >= 86400){
+		days = Math.trunc(remainder / 86400)
+		remainder -= days * 86400
+		resultArr.push(` ${days} day` + (days > 1 ? 's': ''))
+	}
+	if (remainder >= 3600){
+		hours = Math.trunc(remainder / 3600)
+		remainder -= hours * 3600
+		resultArr.push(` ${hours} hour` + (hours > 1 ? 's': ''))
+	}
+	if (remainder >= 60){
+		minutes = Math.trunc(remainder / 60)
+		remainder -= minutes * 60
+		resultArr.push(` ${minutes} minute` + (minutes > 1 ? 's': ''))
+	}
+	if (remainder){
+		resultArr.push(` ${remainder} second` + (remainder > 1 ? 's': ''))
+	}
+	if (resultArr.length == 1){
+		return resultArr.join('').trim()
+	}
+	if (resultArr.length == 2){
+		return resultArr.join(' and').trim()
+	}
+	for(let i = 0; i < resultArr.length - 2; i++){
+		resultArr[i] += ','
+	}
+	resultArr[resultArr.length - 2] += ' and'
+	return resultArr.join('').trim()
 }
-					</code>
-				</pre>
+          </code>
+        </pre>
         </section>
         <section id="projects" class="my_projects">
           <h2 class="section_title">My projects</h2>

@@ -144,15 +144,18 @@ a:hover{
 	color: black;
 }
 
-.skills_list, .code_example__rule-list{
+.skills_list, .code_example__rule-list, .project_list{
 	margin: 0 60px;
 	padding-left: 20px;
 	list-style-type: disc;
 }
 
-.project_link{
-	padding-left: 60px;
-	color: black;
+.project_list{
+	line-height: 30px;
+}
+
+.project_list__link:visited{
+	color: #000;
 }
 
 /* footer styles */

@@ -91,7 +91,7 @@
         <section id="about" class="about_me">
           <h2 class="section_title">About me</h2>
           <p class="about_me_paragraph">
-            I am 20 years old. My goal is to be a frontend developer. I am not
+            I am 20 years old. A year ago I got an electrical engineering degree from the Novopolotsk State Polytechnic College. Currently, I work as an electrician in an electric factory laboratory. My goal is to be a frontend developer. I am not
             satisfied with my current job due to the lack of career growth and
             working conditions.
           </p>
@@ -154,28 +154,28 @@ function formatDuration (seconds) {
 			days = 0,
 			hours = 0,
 			minutes = 0;
-	if (seconds >= 31536000){
+	if (seconds &gt;= 31536000){
 		years = Math.trunc(remainder / 31536000)
 		remainder -= years * 31536000
-		resultArr.push(`${years} year` + (years > 1 ? 's': ''))
+		resultArr.push(`${years} year` + (years &gt; 1 ? 's': ''))
 	}
-	if (remainder >= 86400){
+	if (remainder &gt;= 86400){
 		days = Math.trunc(remainder / 86400)
 		remainder -= days * 86400
-		resultArr.push(` ${days} day` + (days > 1 ? 's': ''))
+		resultArr.push(` ${days} day` + (days &gt; 1 ? 's': ''))
 	}
-	if (remainder >= 3600){
+	if (remainder &gt;= 3600){
 		hours = Math.trunc(remainder / 3600)
 		remainder -= hours * 3600
-		resultArr.push(` ${hours} hour` + (hours > 1 ? 's': ''))
+		resultArr.push(` ${hours} hour` + (hours &gt; 1 ? 's': ''))
 	}
-	if (remainder >= 60){
+	if (remainder &gt;= 60){
 		minutes = Math.trunc(remainder / 60)
 		remainder -= minutes * 60
-		resultArr.push(` ${minutes} minute` + (minutes > 1 ? 's': ''))
+		resultArr.push(` ${minutes} minute` + (minutes &gt; 1 ? 's': ''))
 	}
 	if (remainder){
-		resultArr.push(` ${remainder} second` + (remainder > 1 ? 's': ''))
+		resultArr.push(` ${remainder} second` + (remainder &gt; 1 ? 's': ''))
 	}
 	if (resultArr.length == 1){
 		return resultArr.join('').trim()
@@ -183,7 +183,7 @@ function formatDuration (seconds) {
 	if (resultArr.length == 2){
 		return resultArr.join(' and').trim()
 	}
-	for(let i = 0; i < resultArr.length - 2; i++){
+	for(let i = 0; i &lt; resultArr.length - 2; i++){
 		resultArr[i] += ','
 	}
 	resultArr[resultArr.length - 2] += ' and'

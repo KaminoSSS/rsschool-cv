@@ -154,28 +154,28 @@ function formatDuration (seconds) {
 			days = 0,
 			hours = 0,
 			minutes = 0;
-	if (seconds >= 31536000){
+	if (seconds &gt;= 31536000){
 		years = Math.trunc(remainder / 31536000)
 		remainder -= years * 31536000
-		resultArr.push(`${years} year` + (years > 1 ? 's': ''))
+		resultArr.push(`${years} year` + (years &gt; 1 ? 's': ''))
 	}
-	if (remainder >= 86400){
+	if (remainder &gt;= 86400){
 		days = Math.trunc(remainder / 86400)
 		remainder -= days * 86400
-		resultArr.push(` ${days} day` + (days > 1 ? 's': ''))
+		resultArr.push(` ${days} day` + (days &gt; 1 ? 's': ''))
 	}
-	if (remainder >= 3600){
+	if (remainder &gt;= 3600){
 		hours = Math.trunc(remainder / 3600)
 		remainder -= hours * 3600
-		resultArr.push(` ${hours} hour` + (hours > 1 ? 's': ''))
+		resultArr.push(` ${hours} hour` + (hours &gt; 1 ? 's': ''))
 	}
-	if (remainder >= 60){
+	if (remainder &gt;= 60){
 		minutes = Math.trunc(remainder / 60)
 		remainder -= minutes * 60
-		resultArr.push(` ${minutes} minute` + (minutes > 1 ? 's': ''))
+		resultArr.push(` ${minutes} minute` + (minutes &gt; 1 ? 's': ''))
 	}
 	if (remainder){
-		resultArr.push(` ${remainder} second` + (remainder > 1 ? 's': ''))
+		resultArr.push(` ${remainder} second` + (remainder &gt; 1 ? 's': ''))
 	}
 	if (resultArr.length == 1){
 		return resultArr.join('').trim()
